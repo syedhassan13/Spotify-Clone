@@ -1,0 +1,467 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --a: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+.left {
+  width: 25vw;
+  margin: 10px 5px;
+
+}
+
+
+.right {
+  width: 75vw;
+  margin: 15px 0px;
+  position: relative;
+
+
+
+}
+
+.home ul li {
+  display: flex;
+  width: 14px;
+  list-style: none;
+  gap: 15px;
+  padding-top: 14px;
+  font-weight: bold;
+}
+
+.heading {
+  display: flex;
+  width: 100%;
+  gap: 15px;
+  padding: 9px 5px;
+  font-size: 13px;
+  font-weight: bold;
+  align-items: center;
+
+}
+
+.heading img {
+  width: 30px;
+}
+
+.library {
+  min-height: 70vh;
+  position: relative;
+}
+
+.footer {
+  display: flex;
+  font-size: 10px;
+  gap: 13px;
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+}
+
+.footer a {
+  color: gray;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(34, 34, 34);
+}
+
+.header>* {
+  padding: 20px;
+}
+
+.hamburger {
+  display: none;
+}
+
+.hamburgerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+
+.spotifyPlaylists {
+  padding: 16px;
+}
+
+.spotifyPlaylists h1 {
+  padding: 16px;
+}
+
+.cardContainer {
+  display: flex;
+  gap: 10px;
+  margin: 30px;
+  flex-wrap: wrap;
+  max-height: 45vh;
+  overflow-y: scroll;
+}
+
+.card {
+  width: 250px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #252525;
+  position: relative;
+  transition: all 0.9s;
+}
+
+.card:hover {
+  background-color: rgb(105, 103, 103);
+  cursor: pointer;
+  --a: 1;
+}
+
+.card>* {
+  padding-top: 10px;
+}
+
+.card img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.play {
+  width: 28px;
+  height: 28px;
+  background-color: #1fdf64;
+  border-radius: 50%;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 138px;
+  right: 17px;
+  opacity: var(--a);
+  transition: all 1s ease-out;
+}
+
+.buttons>* {
+  margin: 0 12px;
+}
+
+.signinBtn {
+  background-color: rgb(34, 34, 34);
+  color: rgb(156, 148, 148);
+  font-weight: bold;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+
+}
+
+.signinBtn:hover {
+  font-size: 15px;
+  color: white;
+}
+
+.loginBtn {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.loginBtn:hover {
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.playbar {
+  position: fixed;
+  bottom: 25px;
+  filter: invert(1);
+  background-color: #dad5d5;
+  border-radius: 10px;
+  width: 68vw;
+  min-height: 39px;
+  padding: 12px;
+  z-index: 1;
+}
+
+.naatButtons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.naatList {
+  font-size: 15px;
+  color: white;
+}
+
+.naatList ul {
+  padding: 0 10px;
+}
+
+.naatList ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgba(146, 143, 143, 0.491);
+  margin: 7px 0px;
+  padding: 10px;
+  border-radius: 5px;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.naatList .info {
+  font-size: 13px;
+  width: 350px;
+}
+
+.info div {
+  word-break: break-all;
+}
+
+.playnow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.playnow span {
+  font-size: 15px;
+  width: auto;
+  padding: 0;
+}
+
+/* Optional: Make music icon smaller */
+.naatList img {
+  width: 24px;
+  height: 24px;
+}
+
+.naatList {
+  max-height: 300px;
+  /* Or adjust as needed */
+  overflow-y: auto;
+  padding-right: 5px;
+  /* To prevent scrollbar from overlapping text */
+  margin-bottom: 30px;
+
+}
+
+.seekBar {
+  height: 4px;
+  width: 68vw;
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  border-radius: 10px;
+  margin: 6px;
+  cursor: pointer;
+}
+
+.circle {
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+  background-color: black;
+  position: relative;
+  bottom: 6px;
+  left: 0;
+  transition: left 0.5s;
+
+}
+
+.naatButtons img {
+  cursor: pointer;
+}
+
+.timevol {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.naatInfo {
+  color: black;
+  padding: 0 12px;
+  width: 300px;
+
+}
+
+.naatTime {
+  color: black;
+  padding: 0 12px;
+  width: 100px;
+}
+
+.volume {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.range input {
+  cursor: pointer;
+}
+
+.aboveBar {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 1100px) {
+  .left {
+    position: absolute;
+    left: -200%;
+    transition: all 0.3s;
+    z-index: 2;
+    width: 370px;
+    background-color: black;
+    padding: 0;
+    height: 100vh;
+  
+    position: fixed;
+    top: 0;
+  
+  }
+
+  .left .close {
+    display: block;
+    position: absolute;
+    right: 31px;
+    top: 25px;
+
+  }
+
+  .right {
+    width: 100vw;
+  }
+
+  .playbar {
+    width: calc(100vw - 60px);
+
+  }
+
+  .aboveBar {
+    margin: 20px 0px;
+  }
+
+  .seekBar {
+    width: calc(100vw - 70px);
+    bottom: 8px;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .right {
+    margin: 0;
+  }
+
+  .card {
+    width: 44vw;
+  }
+
+  .cardContainer {
+    margin: 0;
+    justify-content: center;
+  }
+
+  .buttons>* {
+    margin: 0 10px;
+  }
+
+  .loginBtn {
+    font-size: 12px;
+  }
+
+  .loginBtn:hover {
+    font-size: 13px;
+
+  }
+
+  .aboveBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .naatInfo {
+    text-align: center;
+  }
+
+  .timevol {
+    flex-direction: column;
+    gap: 13px;
+  }
+
+  .cardContainer {
+    max-height: 40vh;
+
+    max-height: unset;
+    overflow-y: unset;
+    margin-bottom: 35vh;
+  }
+}
+
+@media (max-width: 780px) {
+  .card {
+    width: 90vw;
+
+  }
+}
+
+@media (max-width: 500px) {
+  .card {
+    width: 100%;
+  }
+
+  .header>* {
+    padding: 2px;
+  }
+  .header{
+    padding: 7px;
+  }
+  .buttons>* {
+    margin: 0 6px;
+  }
+
+  .spotifyPlaylists h1 {
+    padding: 4px;
+  }
+
+  .naatInfo {
+    width: 100px;
+  }
+
+  .cardContainer {
+    margin-bottom: 40vh;
+  }
+  .library{
+    height: 85vh;
+  }
+  .left{
+    width: 100vw;
+  }
+}
