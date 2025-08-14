@@ -19,7 +19,7 @@ function secondsToMinutesSeconds(seconds) {
 async function getNaats(folder) {
   currFolder = folder;
 
-  let a = await fetch(`http://127.0.0.1:3000/${folder}/`);
+  let a = await fetch(`${folder}/`);
   let response = await a.text();
 
   let div = document.createElement("div");
@@ -74,7 +74,7 @@ async function getNaats(folder) {
   return naats;
 }
 async function displayAlbums() {
-  let a = await fetch(`http://127.0.0.1:3000/Naats/`);
+  let a = await fetch(`Naats/`);
   let response = await a.text();
 
   let div = document.createElement("div");
@@ -90,7 +90,7 @@ async function displayAlbums() {
     if (e.href.includes("/Naats")) {
       let folder = e.href.split("/").slice(-2)[0];
       //meta data of the folder
-      let a = await fetch(`http://127.0.0.1:3000/Naats/${folder}/info.json`);
+      let a = await fetch(`Naats/${folder}/info.json`);
       let response = await a.json();
       cardContainer.innerHTML =
         cardContainer.innerHTML +
